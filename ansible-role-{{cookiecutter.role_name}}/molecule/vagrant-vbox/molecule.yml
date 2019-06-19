@@ -1,0 +1,37 @@
+---
+dependency:
+  name: {{ cookiecutter.dependency_name }}
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+lint:
+  name: {{ cookiecutter.lint_name }}
+platforms:
+  - name: instance
+    box: {{ cookiecutter.vagrant_box }}
+provisioner:
+  name: ansible
+  lint:
+    name: {{ cookiecutter.provisioner_lint_name }}
+  inventory:
+    group_vars:
+      all:
+        http_proxy_protocol: http
+        http_proxy_hostname: bcpxy.nycnet
+        http_proxy_port: 8080
+        https_proxy_protocol: http
+        https_proxy_hostname: bcpxy.nycnet
+        https_proxy_port: 8080
+        rhsub_username: ${RHSM_USERNAME}
+        rhsub_password: ${RHSM_PASSWORD}
+        repos:
+          - rhel-server-rhscl-{{ ansible_distribution_major_version }}-rpms
+          - rhel-{{ ansible_distribution_major_version }}-server-optional-rpms
+verifier:
+  name: {{ cookiecutter.verifier_name }}
+  options:
+    verbose: true
+  directory: ../resources/tests/
+  lint:
+    name: {{ cookiecutter.verifier_lint_name }}
