@@ -12,12 +12,12 @@
   - name: Login to RedHat Subscription
     redhat_subscription:
       state: present
-      username: "{{ rhsub_username }}"
-      password: "{{ rhsub_password }}"
+      username: "{{ '{{' }} rhsub_username {{ '}}' }}"
+      password: "{{ '{{' }} rhsub_password {{ '}}' }}"
       auto_attach: true
 
   - name: Subscribe to RHSM Repos
     rhsm_repository:
-      name: "{{ item }}"
+      name: "{{ '{{' }} item {{ '}}' }}"
       state: enabled
-    with_items: "{{ repos }}"
+    with_items: "{{ '{{' }} repos {{ '}}' }}"
