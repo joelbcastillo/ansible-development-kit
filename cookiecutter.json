@@ -30,5 +30,8 @@
     "image_windows2019": "ami-0477b9335a5a75438",
     "instance_type": "m5.large",
     "spot_price": "0.04",
-    "vagrant-box": "rhel-7.6"
+    "vagrant-box": "rhel-7.6",
+    "_copy_without_render": [
+        "molecule/resources/templates/*"
+    ]
 }
