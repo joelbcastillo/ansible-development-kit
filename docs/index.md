@@ -1,13 +1,15 @@
 ---
 layout: default
-title: Ansible Development Kit
+title: NYC Records Ansible Development Kit
 nav_order: 1
 ---
 
 # Ansible Development Kit
 {: .no_toc }
 
-Ansible Development Kit is a collection of tools, libraries, and templates are based on Lean Delivery approach and community best practices for roles and playbooks development.
+The NYC Records Ansible Development Kit is a collection of tools, libraries, and templates are based on Lean Delivery approach and community best practices for roles and playbooks development.
+
+It is based off of the [Lean Delivery Ansible Development Kit](https://github.com/lean-delivery/ansible-development-kit).
 
 ## Why this product?
 
@@ -27,8 +29,8 @@ Ansible Development Kit provides:
 
 - All stages described in accordance with SDLC stages such as Development and Implementation, Testing and Integration, Release Management, Feedback and Analysis.
 - Preconfigured assets for integration with required components ex. Version Control System, Continuous Integration, Testing, Release Management.
-- Broad set of tools and services on each stage of life cycle including GitLab, GitHub, Travis CI, GitLab Runners, Molecule, TestInfra, Ansible Galaxy, Docker.
-- Integration with popular clouds. Amazon, Azure, Google Cloud Platform, EPAM Cloud.
+- Broad set of tools and services on each stage of life cycle including GitHub, Travis CI, Molecule, TestInfra, Ansible Galaxy.
+- Integration with Amazon, Azure public clouds (coming soon)
 - Public and private hosting of CI process.
 - Template based on Cookiecutter framework which represents independent repository with logical and hierarchical structure, contains configuration and test assets to avoid starting development from scratch.
 
@@ -42,12 +44,8 @@ To organize your own solution based on Ansible Development Kit you need to perfo
 [https://galaxy.ansible.com/docs/contributing/importing.html](https://galaxy.ansible.com/docs/contributing/importing.html)
 3.  Setup Travis CI accordingly:
 [https://docs.travis-ci.com/user/tutorial/](https://docs.travis-ci.com/user/tutorial/)
-4.  Setup Gitlab CI accordingly:
-[https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/github_integration.html](https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/github_integration.html)
-5.  Setup your Gitlab runners if necessary:
-See [related Terraform module](https://github.com/lean-delivery/tf-module-aws-gitlab-runner) or [Gitlab-runner Ansible role](https://github.com/lean-delivery/ansible-role-gitlab-runner) and [related Dockerfile](https://github.com/lean-delivery/docker-ansible-ci).
-6.  Organize service accounts for your cloud tests.
-7.  Create you Cookiecutter templates:
+1.  Organize service accounts for your cloud tests.
+2.  Create you Cookiecutter templates:
 See [our one](https://github.com/lean-delivery/ansible-development-kit) for example.
 8.  Add Lint tests according to documentation:   
 [Yamllint](https://yamllint.readthedocs.io/en/stable/)   
