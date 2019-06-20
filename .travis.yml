@@ -4,14 +4,14 @@ sudo: required
 
 language: python
 python:
-  - "2.7"
+  - "3.7"
 
 before_install:
   - git clone https://github.com/nycrecords/ansible-lint-rules.git ~/ansible-lint-rules
 
 install:
   - pip install pipenv
-  - pipenv install
+  - pipenv install --dev
   - ansible --version
   - ansible-lint --version
 

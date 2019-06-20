@@ -1,8 +1,7 @@
 ansible-development-kit
 =========
-[![License](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/lean-delivery/ansible-development-kit/master/LICENSE)
-[![Build Status](https://travis-ci.org/lean-delivery/ansible-development-kit.svg?branch=master)](https://travis-ci.org/lean-delivery/ansible-development-kit)
-[![Build Status](https://gitlab.com/lean-delivery/ansible-development-kit/badges/master/build.svg)](https://gitlab.com/lean-delivery/ansible-development-kit/pipelines)
+[![License](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/nycrecords/ansible-development-kit/master/LICENSE)
+[![Build Status](https://travis-ci.org/nycrecords/ansible-development-kit.svg?branch=master)](https://travis-ci.org/nycrecords/ansible-development-kit)
 
 ## How to use:
 
@@ -10,11 +9,7 @@ pip install cookiecutter
 
 ### Create a new role
 
-- cookiecutter https://github.com/lean-delivery/ansible-development-kit
-
-or
-
-- molecule init template --url https://github.com/lean-delivery/ansible-development-kit
+- cookiecutter https://github.com/nycrecords/ansible-development-kit
 
 Enter for the role name question a value without the ansible-role- prefix, e.g. example.
 
