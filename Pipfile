@@ -6,8 +6,8 @@ verify_ssl = true
 [dev-packages]
 ansible = "<2.8"
 molecule = {extras = ["vagrant"],version = "*"}
-
-[packages]
+cookiecutter = "*"
+pytest-cookies = "*"
 
 [requires]
 python_version = "3.7"

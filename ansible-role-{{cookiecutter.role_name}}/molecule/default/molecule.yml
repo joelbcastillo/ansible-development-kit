@@ -27,7 +27,6 @@ provisioner:
         rhsub_username: ${RHSM_USERNAME}
         rhsub_password: ${RHSM_PASSWORD}
         repos:
-
           - rhel-server-rhscl-{{ '{{' }} ansible_distribution_major_version {{ '}}' }}-rpms
           - rhel-{{ '{{' }} ansible_distribution_major_version {{ '}}' }}-server-optional-rpms
 verifier:

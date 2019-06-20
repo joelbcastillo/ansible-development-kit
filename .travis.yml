@@ -6,15 +6,12 @@ language: python
 python:
   - "2.7"
 
-services:
-  - docker
-
 before_install:
-  - git clone https://github.com/lean-delivery/ansible-lint-rules.git ~/ansible-lint-rules
+  - git clone https://github.com/nycrecords/ansible-lint-rules.git ~/ansible-lint-rules
 
 install:
-  - pip install --upgrade ansible==2.7.* docker-py molecule==2.20 pyOpenSSL PyYAML pytest
-  - pip install git+https://github.com/ansible/ansible-lint.git
+  - pip install pipenv
+  - pipenv install
   - ansible --version
   - ansible-lint --version
 
@@ -23,4 +20,3 @@ script:
   - cd ansible-role-default_role
   - yamllint . -c .yamllint
   - ansible-lint . -c .ansible-lint
-  - molecule test
