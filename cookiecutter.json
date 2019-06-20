@@ -1,6 +1,7 @@
 {
     "role_name": "default_role",
     "author_name": "NYC Records App Dev Team <appdev@records.nyc.gov>",
+    "license": "Apache",
     "dependency_name": "galaxy",
     "lint_name": "yamllint",
     "provisioner_name": "ansible",
