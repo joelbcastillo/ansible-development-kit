@@ -9,7 +9,7 @@ before_install:
 
 install:
   - pip install poetry
-  - pipenv install
+  - poetry install
   - ansible --version
   - ansible-lint --version
 
