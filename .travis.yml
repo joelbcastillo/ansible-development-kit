@@ -8,8 +8,8 @@ before_install:
   - git clone https://github.com/nycrecords/ansible-lint-rules.git ~/ansible-lint-rules
 
 install:
-  - pip install pipenv
-  - pipenv install --dev
+  - pip install poetry
+  - pipenv install
   - ansible --version
   - ansible-lint --version
 
