@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ansible-development-kit"
+version = "0.1.0"
+description = "Cookiecutter Template for developing Ansible Roles."
+authors = ["Joel Castillo <jocastillo@records.nyc.gov>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+cookiecutter = "^1.7.2"
+pytest-cookies = "*"
+ansible = "<2.8"
+molecule = {version = "2.22", extras = ["ec2", "vagrant"]}
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

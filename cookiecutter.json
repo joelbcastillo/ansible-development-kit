@@ -10,11 +10,13 @@
     "verifier_lint_name": "flake8",
     "min_ansible_version": "2.7",
     "company_name": "NYC Department of Records and Information Services",
+    "organization": "nycrecords",
     "role_description": "Ansible Role created by NYC Records",
     "issue_tracker_url": "https://github.com/nycrecords/ansible-role-{{ cookiecutter.role_name }}/issues",
     "galaxy_tags": "[development, system]",
     "platforms": "[{name: [EL], versions: [7]}]",
     "copyright_year": "2019",
     "copyright_owner": "City of New York",
-    "vagrant_box": "rhel-7.6"
+    "vagrant_box": "generic/rhel7",
+    "subnet_id": "subnet-goes-here"
 }

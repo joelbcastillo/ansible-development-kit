@@ -3,7 +3,8 @@ ansible-development-kit
 [![License](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/nycrecords/ansible-development-kit/master/LICENSE)
 [![Build Status](https://travis-ci.com/nycrecords/ansible-development-kit.svg?branch=master)](https://travis-ci.com/nycrecords/ansible-development-kit)
 
-## How to use:
+How to use
+----------
 
 pip install cookiecutter
 

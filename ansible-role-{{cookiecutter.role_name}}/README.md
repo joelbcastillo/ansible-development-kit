@@ -1,9 +1,8 @@
-{{ cookiecutter.role_name }} role
+Ansible Role: {{ cookiecutter.role_name }}
 =========
-[![License](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/lean-delivery/ansible-role-{{ cookiecutter.role_name }}/master/LICENSE)
-[![Build Status](https://travis-ci.org/lean-delivery/ansible-role-{{ cookiecutter.role_name }}.svg?branch=master)](https://travis-ci.org/lean-delivery/ansible-role-{{ cookiecutter.role_name }})
-[![Build Status](https://gitlab.com/lean-delivery/ansible-role-{{ cookiecutter.role_name }}/badges/master/build.svg)](https://gitlab.com/lean-delivery/ansible-role-{{ cookiecutter.role_name }})
-[![Galaxy](https://img.shields.io/badge/galaxy-lean__delivery.{{ cookiecutter.role_name }}-blue.svg)](https://galaxy.ansible.com/lean_delivery/{{ cookiecutter.role_name }})
+[![License](https://img.shields.io/badge/license-Apache-green.svg?style=flat)](https://raw.githubusercontent.com/{{ cookiecutter.organization }}/ansible-role-{{ cookiecutter.role_name }}/master/LICENSE)
+[![Build Status](https://travis-ci.com/{{ cookiecutter.organization }}/ansible-role-{{ cookiecutter.role_name }}.svg?branch=master)](https://travis-ci.com/{{ cookiecutter.organization }}/ansible-role-{{ cookiecutter.role_name }})
+[![Galaxy](https://img.shields.io/badge/galaxy-{{ cookiecutter.organization }}.{{ cookiecutter.role_name }}-blue.svg)](https://galaxy.ansible.com/{{ cookiecutter.organization }}/{{ cookiecutter.role_name }})
 ![Ansible](https://img.shields.io/ansible/role/d/role_id.svg)
 ![Ansible](https://img.shields.io/badge/dynamic/json.svg?label=min_ansible_version&url=https%3A%2F%2Fgalaxy.ansible.com%2Fapi%2Fv1%2Froles%2Frole_id%2F&query=$.min_ansible_version)
 
@@ -44,10 +43,11 @@ passed in as parameters) is always nice for users too:
 
 License
 -------
+
 {{ cookiecutter.license }}
 
 Author Information
 ------------------
 
-authors:
+Authors:
   - {{ cookiecutter.author_name }}

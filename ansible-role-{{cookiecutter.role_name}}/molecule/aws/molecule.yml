@@ -3,22 +3,25 @@ dependency:
   name: {{ cookiecutter.dependency_name }}
   role-file: ../resources/requirements.yml
 driver:
-  name: vagrant
-  provider:
-    name: virtualbox
+  name: ec2
 lint:
   name: {{ cookiecutter.lint_name }}
 platforms:
   - name: instance
-    box: {{ cookiecutter.vagrant_box }}
+    image: ami-000db10762d0c4c05
+    instance_type: t2.micro
+    vpc_subnet_id: {{ cookiecutter.subnet_id }}
 provisioner:
   name: ansible
   lint:
     name: {{ cookiecutter.provisioner_lint_name }}
+  connection_options:
+    ansible_user: ec2-user
+  playbooks:
+    converge: converge.yml
+    cleanup: cleanup.yml
 verifier:
-  name: {{ cookiecutter.verifier_name }}
-  options:
-    verbose: true
+  name: testinfra
   directory: ../resources/tests/
   lint:
     name: {{ cookiecutter.verifier_lint_name }}
