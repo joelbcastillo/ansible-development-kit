@@ -1,3 +1,4 @@
+{% raw %}
 ---
 - name: Create
   hosts: localhost
@@ -24,8 +25,9 @@
         from_port: 0
         to_port: 0
         cidr_ip: '0.0.0.0/0'
-
+{% endraw %}
     keypair_name: ansible_role_{{ cookiecutter.role_name }}_molecule_key
+{% raw %}
     keypair_path: "{{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/ssh_key"
   tasks:
     - name: Create security group
@@ -69,7 +71,9 @@
         group_id: "{{ security_group_id.group_id }}"
         instance_tags:
           instance: "{{ item.name }}"
+{% endraw %}
           Name: "ansible-role-{{ cookiecutter.role_name }}"
+{% raw %}
         wait: true
         assign_public_ip: true
         exact_count: 1
@@ -125,3 +129,4 @@
         delay: 10
         timeout: 320
       with_items: "{{ lookup('file', molecule_instance_config) | molecule_from_yaml }}"
+{% endraw %}
